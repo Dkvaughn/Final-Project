@@ -7,14 +7,14 @@ export default class Dashboard extends Component {
 
     state = {
         messages: [],
+        input: ''
     }
-
 
 ComponentDidMount() {
     this.loadMessages();
 }
 
-loadMesages = () => {
+loadMessages = () => {
     API.getMessages()
     .then(res =>
     this.setState({ messages: res.data, message: " " })
@@ -38,9 +38,11 @@ handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.messages) {
         API.saveMessages({
-            messages: this.state.messages,
+            messages: this.state.input,
         })
-        .then(res =>this.loadMessages())
+        .then(res => {
+            this.loadMessages()
+        })
         .catch(err => console.log(err));
     }
 };
@@ -50,9 +52,9 @@ render() {
         <div>
            
             <Input
-            value={this.state.messages}
+            value={this.state.input}
             onChange={this.handleInputChange}
-            name="messages"
+            name="input"
             placeholder="please type a message"
             />
 
