@@ -1,0 +1,38 @@
+.background-image {
+    background-image: url("../apt.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    margin-top: 150px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1 {
+    display: inline-block;
+    text-align: center;
+    font-size: 220px;
+    color: darkorange;
+    text-shadow: 1.5px 1.5px 1.5px white;
+    font-style: italic;
+    position: absolute; 
+    left: 0; 
+    width: 100%;   
+    font-family: 'Rock Salt', cursive;
+    padding: 70px;
+    top: 10px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    opacity: .9;
+    padding-right: 85px;
+    width: 350px;
+    box-shadow: .5em;
+    margin: 60px;
+}
+
