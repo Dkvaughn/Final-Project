@@ -3,7 +3,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const PORT = process.env.PORT || 3001; 
+// var router = express.Router();
+const PORT = process.env.PORT || 3000; 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -14,8 +15,15 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(routes);
 
+
+// app.get("/", function(req,res){
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
 // routes.initialize(app);
 
+// router.get("/", function(req, res, next){
+
+// })
 
 // app.use(app.router);
 
