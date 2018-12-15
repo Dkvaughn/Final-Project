@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BillsPage from "../src/pages/BillsPage"
 import Dashboard from "../src/pages/DashBoardPage";
-// import "../../templateLogReg/index.html";
+// import HomePage from "../../routes/staticRoute";
 
 
 const App = () => (
   <Router>
     <div>
       <Switch>
-        {/* <Route exact path="" component={}/> */}
+        {/* <Route exact path="/" component={HomePage}/> */}
         <Route exact path="/bills" component={BillsPage} />
         <Route exact path="/message" component={Dashboard} />
         {/* <Route exact path="/books/:id" component={Detail} /> */}
