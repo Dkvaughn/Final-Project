@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import './bills.css'
 
-export default class BillsPage extends Component {
+class BillsPage extends Component {
+
+// export default class BillsPage extends Component {
     state = {
         rent: 0,
         electricity: 0,
@@ -107,3 +109,5 @@ export default class BillsPage extends Component {
     }
   }
   
+
+  export default BillsPage;
